@@ -1,0 +1,2265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/osSlider.css" />
+    <script src="jquery-3.1.0.js"></script>
+    <script src="javascript.js"></script>
+    <script src="js/osSlider.js"></script> 
+    <script>
+        $(function(){
+            var slider = new osSlider({
+                pNode:'.slider',
+                cNode:'.slider-main li',
+                speed:3000,
+                autoPlay:true
+            });   
+            $(document).scroll(function(){
+                $top = $("body").scrollTop();
+                $wheight = $(window).innerHeight();
+                if($top >= ($wheight - 200)){
+                    $(".container").css({
+                        "position":"fixed",
+                        "top":"10px"
+                    });
+                }else{
+                    if($(".container").css("position") == "fixed"){
+                        $(".container").css({
+                            "position":"absolute",
+                            "top":($wheight - 200)+"px"
+                        });
+                    }
+                }
+            });
+                    $(".box").click(function(){
+                    $i = $(".box").index($(this));
+                    $("body").animate({
+                        scrollTop:$i * ($(window).innerHeight())+"px"
+                    },200);
+                });
+        })
+    </script>
+</head>
+<body>
+    <header>
+        <div class="opt">
+            <div class="item">
+                送至：北京
+                <div class="it">
+                <div id="items" class="def">北京</div>
+                <div id="items">无锡</div>
+                <div id="items">天津</div>
+                <div id="items">山东</div>
+                <div id="items">南京</div>
+                </div>
+                <div class="it">
+                <div id="items">上海</div>
+                <div id="items">无锡</div>
+                <div id="items">天津</div>
+                <div id="items">山东</div>
+                <div id="items">南京</div>
+                </div>
+                <div class="it">
+                <div id="items">上海</div>
+                <div id="items">无锡</div>
+                <div id="items">天津</div>
+                <div id="items">山东</div>
+                <div id="items">南京</div>
+                </div>
+                <div class="it">
+                <div id="items">上海</div>
+                <div id="items">无锡</div>
+                <div id="items">天津</div>
+                <div id="items">山东</div>
+                <div id="items">南京</div>
+                </div>
+                <div class="it">
+                <div id="items">上海</div>
+                <div id="items">无锡</div>
+                <div id="items">天津</div>
+                <div id="items">山东</div>
+                <div id="items">南京</div>
+                </div>
+                <div class="it">
+                <div id="items">上海</div>
+                <div id="items">无锡</div>
+                <div id="items">天津</div>
+                <div id="items">山东</div>
+                <div id="items">南京</div>
+                </div>
+            </div>
+            <div class="dt">
+                <div class="link">
+                <a href="#">你好，请登入</a>
+                <a href="#" id="free">免费注册</a>
+                <a href="#">我的订单</a>
+                </div>
+                <div class="oo o1">我的京东
+                    <div class="jd">您好，请登入</div>
+                </div>
+                <div class="link">
+                <a href="#">京东会员</a>
+                <a href="#">企业采购</a>
+                </div>
+                <div class="oo o2">手机京东
+                    <div class="jd">京东客户端</div>
+                </div>
+                <div class="oo o3">关注京东
+                    <div class="jd">关注京东</div>
+                </div>
+                <div class="oo o4">客户服务
+                    <div class="jd">客户服务</div>
+                </div>
+                <div class="oo o5">网站导航
+                    <div class="jd">网站导航</div>
+                </div>
+            </div>
+        </div>
+        <div class="search">
+            <div class="img"></div>
+            <div class="inp">
+            <input type="text"/><input type="button" value="搜索"/>
+            <div class="scar">
+                <div class="c">我的购物车</div>
+                <div class="car">这是您的购物车</div>
+                <div class="q">></div></div>
+                <div class="l">
+                    <a href="#">京东超市</a>
+                    <a href="#">家电秒杀</a>
+                    <a href="#">买3免1</a>
+                    <a href="#">1元拿走</a>
+                    <a href="#">明星直播</a>
+                    <a href="#">阿迪达斯</a>
+                    <a href="#">笔袋</a>
+                    <a href="#">一元专享</a>
+                    <a href="#">长袖T恤男</a>
+                </div>
+                <div class="nav">
+                    <h4>服装城</h4>
+                    <h4>美术馆</h4>
+                    <h4>京东超市</h4>
+                    <h4>生鲜</h4>
+                    <h4>全球购</h4>
+                    <h4>闪购</h4>
+                    <h4>团购</h4>
+                    <h4>拍卖</h4>
+                    <h4>金融</h4>
+                </div>
+                <div class="step">
+                    <p>全部商品分类</p>
+                </div>
+                <div class="thread"></div>
+        </div>
+        </div>
+    </header>
+    <main>
+        <div class="steps">
+            <div class="tep">
+                <a  href="#">家用电器</a>
+            <div class="itms">
+                <div class="imp">
+                    <div class="mp">家电城&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">品牌日&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">智能生活馆&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">京东净化馆&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">京东帮服务店&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">家电众筹馆&nbsp<h5>&nbsp></h5></div>
+                </div>
+                <div class="content">
+                    <div class="title">
+                        <h1>电视&nbsp></h1>
+                        <h6>合资品牌&nbsp|</h6>
+                        <h6>国产品牌&nbsp|</h6>
+                        <h6>互联网品牌</h6>
+                    </div>
+                    <div class="title">
+                        <h1>空调&nbsp></h1>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>洗衣机&nbsp></h1>
+                        <h6>滚筒洗衣机&nbsp|</h6>
+                        <h6>洗烘一体机&nbsp|</h6>
+                        <h6>波轮洗衣机&nbsp|</h6>
+                        <h6>迷你洗衣机&nbsp|</h6>
+                        <h6>洗衣机配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>厨卫大电&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>嵌入式厨电</h6>
+                    </div>
+                    <div class="title">
+                        <h1>厨卫小电&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>燃气热水器</h6>
+                    </div>
+                    <div class="title">
+                        <h1>生活电器&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>个护健康&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>家庭影音&nbsp></h1>
+                        <h6>家庭影院&nbsp|</h6>
+                        <h6>迷你音响&nbsp|</h6>
+                        <h6>DVD&nbsp|</h6>
+                        <h6>电视影音配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>进口电器&nbsp></h1>
+                        <h6>进口电器</h6>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="tep">
+            <a href="#">手机、数码、京东通信</a>
+            <div class="itms">
+                <div class="imp">
+                    <div class="mp">玩3C&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">品牌日&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">智能生活馆&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">京东净化馆&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">京东帮服务店&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">家电众筹馆&nbsp<h5>&nbsp></h5></div>
+                </div>
+                <div class="content">
+                    <div class="title">
+                        <h1>电视&nbsp></h1>
+                        <h6>合资品牌&nbsp|</h6>
+                        <h6>国产品牌&nbsp|</h6>
+                        <h6>互联网品牌</h6>
+                    </div>
+                    <div class="title">
+                        <h1>空调&nbsp></h1>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>洗衣机&nbsp></h1>
+                        <h6>滚筒洗衣机&nbsp|</h6>
+                        <h6>洗烘一体机&nbsp|</h6>
+                        <h6>波轮洗衣机&nbsp|</h6>
+                        <h6>迷你洗衣机&nbsp|</h6>
+                        <h6>洗衣机配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>厨卫大电&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>嵌入式厨电</h6>
+                    </div>
+                    <div class="title">
+                        <h1>厨卫小电&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>燃气热水器</h6>
+                    </div>
+                    <div class="title">
+                        <h1>生活电器&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>个护健康&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>家庭影音&nbsp></h1>
+                        <h6>家庭影院&nbsp|</h6>
+                        <h6>迷你音响&nbsp|</h6>
+                        <h6>DVD&nbsp|</h6>
+                        <h6>电视影音配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>进口电器&nbsp></h1>
+                        <h6>进口电器</h6>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="tep">
+            <a href="#">电脑、办公</a>
+             <div class="itms">
+                <div class="imp">
+                    <div class="mp">玩3C&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">品牌日&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">智能生活馆&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">京东净化馆&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">京东帮服务店&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">家电众筹馆&nbsp<h5>&nbsp></h5></div>
+                </div>
+                <div class="content">
+                    <div class="title">
+                        <h1>电视&nbsp></h1>
+                        <h6>合资品牌&nbsp|</h6>
+                        <h6>国产品牌&nbsp|</h6>
+                        <h6>互联网品牌</h6>
+                    </div>
+                    <div class="title">
+                        <h1>空调&nbsp></h1>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>洗衣机&nbsp></h1>
+                        <h6>滚筒洗衣机&nbsp|</h6>
+                        <h6>洗烘一体机&nbsp|</h6>
+                        <h6>波轮洗衣机&nbsp|</h6>
+                        <h6>迷你洗衣机&nbsp|</h6>
+                        <h6>洗衣机配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>厨卫大电&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>嵌入式厨电</h6>
+                    </div>
+                    <div class="title">
+                        <h1>厨卫小电&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>燃气热水器</h6>
+                    </div>
+                    <div class="title">
+                        <h1>生活电器&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>个护健康&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>家庭影音&nbsp></h1>
+                        <h6>家庭影院&nbsp|</h6>
+                        <h6>迷你音响&nbsp|</h6>
+                        <h6>DVD&nbsp|</h6>
+                        <h6>电视影音配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>进口电器&nbsp></h1>
+                        <h6>进口电器</h6>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="tep">
+            <a href="#">家具、家居、家装、厨具</a>
+            <div class="itms">
+                <div class="imp">
+                    <div class="mp">家装节&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">品牌日&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">智能生活馆&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">京东净化馆&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">京东帮服务店&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">家电众筹馆&nbsp<h5>&nbsp></h5></div>
+                </div>
+                <div class="content">
+                    <div class="title">
+                        <h1>电视&nbsp></h1>
+                        <h6>合资品牌&nbsp|</h6>
+                        <h6>国产品牌&nbsp|</h6>
+                        <h6>互联网品牌</h6>
+                    </div>
+                    <div class="title">
+                        <h1>空调&nbsp></h1>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>洗衣机&nbsp></h1>
+                        <h6>滚筒洗衣机&nbsp|</h6>
+                        <h6>洗烘一体机&nbsp|</h6>
+                        <h6>波轮洗衣机&nbsp|</h6>
+                        <h6>迷你洗衣机&nbsp|</h6>
+                        <h6>洗衣机配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>厨卫大电&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>嵌入式厨电</h6>
+                    </div>
+                    <div class="title">
+                        <h1>厨卫小电&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>燃气热水器</h6>
+                    </div>
+                    <div class="title">
+                        <h1>生活电器&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>个护健康&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>家庭影音&nbsp></h1>
+                        <h6>家庭影院&nbsp|</h6>
+                        <h6>迷你音响&nbsp|</h6>
+                        <h6>DVD&nbsp|</h6>
+                        <h6>电视影音配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>进口电器&nbsp></h1>
+                        <h6>进口电器</h6>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="tep">
+            <a href="#">男装、女装、童装、内衣</a>
+            <div class="itms">
+                <div class="imp">
+                    <div class="mp">男装&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">品牌日&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">智能生活馆&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">京东净化馆&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">京东帮服务店&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">家电众筹馆&nbsp<h5>&nbsp></h5></div>
+                </div>
+                <div class="content">
+                    <div class="title">
+                        <h1>电视&nbsp></h1>
+                        <h6>合资品牌&nbsp|</h6>
+                        <h6>国产品牌&nbsp|</h6>
+                        <h6>互联网品牌</h6>
+                    </div>
+                    <div class="title">
+                        <h1>空调&nbsp></h1>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>洗衣机&nbsp></h1>
+                        <h6>滚筒洗衣机&nbsp|</h6>
+                        <h6>洗烘一体机&nbsp|</h6>
+                        <h6>波轮洗衣机&nbsp|</h6>
+                        <h6>迷你洗衣机&nbsp|</h6>
+                        <h6>洗衣机配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>厨卫大电&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>嵌入式厨电</h6>
+                    </div>
+                    <div class="title">
+                        <h1>厨卫小电&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>燃气热水器</h6>
+                    </div>
+                    <div class="title">
+                        <h1>生活电器&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>个护健康&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>家庭影音&nbsp></h1>
+                        <h6>家庭影院&nbsp|</h6>
+                        <h6>迷你音响&nbsp|</h6>
+                        <h6>DVD&nbsp|</h6>
+                        <h6>电视影音配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>进口电器&nbsp></h1>
+                        <h6>进口电器</h6>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="tep">
+            <a href="#">个性化妆、清洁用品、宠物</a>
+            <div class="itms">
+                <div class="imp">
+                    <div class="mp">京东超市&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">品牌日&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">智能生活馆&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">京东净化馆&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">京东帮服务店&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">家电众筹馆&nbsp<h5>&nbsp></h5></div>
+                </div>
+                <div class="content">
+                    <div class="title">
+                        <h1>电视&nbsp></h1>
+                        <h6>合资品牌&nbsp|</h6>
+                        <h6>国产品牌&nbsp|</h6>
+                        <h6>互联网品牌</h6>
+                    </div>
+                    <div class="title">
+                        <h1>空调&nbsp></h1>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>洗衣机&nbsp></h1>
+                        <h6>滚筒洗衣机&nbsp|</h6>
+                        <h6>洗烘一体机&nbsp|</h6>
+                        <h6>波轮洗衣机&nbsp|</h6>
+                        <h6>迷你洗衣机&nbsp|</h6>
+                        <h6>洗衣机配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>厨卫大电&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>嵌入式厨电</h6>
+                    </div>
+                    <div class="title">
+                        <h1>厨卫小电&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>燃气热水器</h6>
+                    </div>
+                    <div class="title">
+                        <h1>生活电器&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>个护健康&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>家庭影音&nbsp></h1>
+                        <h6>家庭影院&nbsp|</h6>
+                        <h6>迷你音响&nbsp|</h6>
+                        <h6>DVD&nbsp|</h6>
+                        <h6>电视影音配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>进口电器&nbsp></h1>
+                        <h6>进口电器</h6>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="tep">
+            <a href="#">鞋靴、箱包、珠宝、奢侈品</a>
+            <div class="itms">
+                <div class="imp">
+                    <div class="mp">当季热卖&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">品牌日&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">智能生活馆&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">京东净化馆&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">京东帮服务店&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">家电众筹馆&nbsp<h5>&nbsp></h5></div>
+                </div>
+                <div class="content">
+                    <div class="title">
+                        <h1>电视&nbsp></h1>
+                        <h6>合资品牌&nbsp|</h6>
+                        <h6>国产品牌&nbsp|</h6>
+                        <h6>互联网品牌</h6>
+                    </div>
+                    <div class="title">
+                        <h1>空调&nbsp></h1>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>洗衣机&nbsp></h1>
+                        <h6>滚筒洗衣机&nbsp|</h6>
+                        <h6>洗烘一体机&nbsp|</h6>
+                        <h6>波轮洗衣机&nbsp|</h6>
+                        <h6>迷你洗衣机&nbsp|</h6>
+                        <h6>洗衣机配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>厨卫大电&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>嵌入式厨电</h6>
+                    </div>
+                    <div class="title">
+                        <h1>厨卫小电&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>燃气热水器</h6>
+                    </div>
+                    <div class="title">
+                        <h1>生活电器&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>个护健康&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>家庭影音&nbsp></h1>
+                        <h6>家庭影院&nbsp|</h6>
+                        <h6>迷你音响&nbsp|</h6>
+                        <h6>DVD&nbsp|</h6>
+                        <h6>电视影音配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>进口电器&nbsp></h1>
+                        <h6>进口电器</h6>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="tep">
+            <a href="#">运动户外、钟表</a>
+            <div class="itms">
+                <div class="imp">
+                    <div class="mp">赛事&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">品牌日&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">智能生活馆&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">京东净化馆&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">京东帮服务店&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">家电众筹馆&nbsp<h5>&nbsp></h5></div>
+                </div>
+                <div class="content">
+                    <div class="title">
+                        <h1>电视&nbsp></h1>
+                        <h6>合资品牌&nbsp|</h6>
+                        <h6>国产品牌&nbsp|</h6>
+                        <h6>互联网品牌</h6>
+                    </div>
+                    <div class="title">
+                        <h1>空调&nbsp></h1>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>洗衣机&nbsp></h1>
+                        <h6>滚筒洗衣机&nbsp|</h6>
+                        <h6>洗烘一体机&nbsp|</h6>
+                        <h6>波轮洗衣机&nbsp|</h6>
+                        <h6>迷你洗衣机&nbsp|</h6>
+                        <h6>洗衣机配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>厨卫大电&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>嵌入式厨电</h6>
+                    </div>
+                    <div class="title">
+                        <h1>厨卫小电&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>燃气热水器</h6>
+                    </div>
+                    <div class="title">
+                        <h1>生活电器&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>个护健康&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>家庭影音&nbsp></h1>
+                        <h6>家庭影院&nbsp|</h6>
+                        <h6>迷你音响&nbsp|</h6>
+                        <h6>DVD&nbsp|</h6>
+                        <h6>电视影音配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>进口电器&nbsp></h1>
+                        <h6>进口电器</h6>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="tep">
+            <a href="#">汽车、汽车用品</a>
+            <div class="itms">
+                <div class="imp">
+                    <div class="mp">全新汽车&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">品牌日&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">智能生活馆&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">京东净化馆&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">京东帮服务店&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">家电众筹馆&nbsp<h5>&nbsp></h5></div>
+                </div>
+                <div class="content">
+                    <div class="title">
+                        <h1>电视&nbsp></h1>
+                        <h6>合资品牌&nbsp|</h6>
+                        <h6>国产品牌&nbsp|</h6>
+                        <h6>互联网品牌</h6>
+                    </div>
+                    <div class="title">
+                        <h1>空调&nbsp></h1>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>洗衣机&nbsp></h1>
+                        <h6>滚筒洗衣机&nbsp|</h6>
+                        <h6>洗烘一体机&nbsp|</h6>
+                        <h6>波轮洗衣机&nbsp|</h6>
+                        <h6>迷你洗衣机&nbsp|</h6>
+                        <h6>洗衣机配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>厨卫大电&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>嵌入式厨电</h6>
+                    </div>
+                    <div class="title">
+                        <h1>厨卫小电&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>燃气热水器</h6>
+                    </div>
+                    <div class="title">
+                        <h1>生活电器&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>个护健康&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>家庭影音&nbsp></h1>
+                        <h6>家庭影院&nbsp|</h6>
+                        <h6>迷你音响&nbsp|</h6>
+                        <h6>DVD&nbsp|</h6>
+                        <h6>电视影音配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>进口电器&nbsp></h1>
+                        <h6>进口电器</h6>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="tep">
+            <a href="#">母婴、玩具乐器</a>
+            <div class="itms">
+                <div class="imp">
+                    <div class="mp">京东超市&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">品牌日&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">智能生活馆&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">京东净化馆&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">京东帮服务店&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">家电众筹馆&nbsp<h5>&nbsp></h5></div>
+                </div>
+                <div class="content">
+                    <div class="title">
+                        <h1>电视&nbsp></h1>
+                        <h6>合资品牌&nbsp|</h6>
+                        <h6>国产品牌&nbsp|</h6>
+                        <h6>互联网品牌</h6>
+                    </div>
+                    <div class="title">
+                        <h1>空调&nbsp></h1>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>洗衣机&nbsp></h1>
+                        <h6>滚筒洗衣机&nbsp|</h6>
+                        <h6>洗烘一体机&nbsp|</h6>
+                        <h6>波轮洗衣机&nbsp|</h6>
+                        <h6>迷你洗衣机&nbsp|</h6>
+                        <h6>洗衣机配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>厨卫大电&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>嵌入式厨电</h6>
+                    </div>
+                    <div class="title">
+                        <h1>厨卫小电&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>燃气热水器</h6>
+                    </div>
+                    <div class="title">
+                        <h1>生活电器&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>个护健康&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>家庭影音&nbsp></h1>
+                        <h6>家庭影院&nbsp|</h6>
+                        <h6>迷你音响&nbsp|</h6>
+                        <h6>DVD&nbsp|</h6>
+                        <h6>电视影音配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>进口电器&nbsp></h1>
+                        <h6>进口电器</h6>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="tep">
+            <a href="#">食品、酒类、生鲜、特产</a>
+            <div class="itms">
+                <div class="imp">
+                    <div class="mp">生鲜&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">品牌日&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">智能生活馆&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">京东净化馆&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">京东帮服务店&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">家电众筹馆&nbsp<h5>&nbsp></h5></div>
+                </div>
+                <div class="content">
+                    <div class="title">
+                        <h1>电视&nbsp></h1>
+                        <h6>合资品牌&nbsp|</h6>
+                        <h6>国产品牌&nbsp|</h6>
+                        <h6>互联网品牌</h6>
+                    </div>
+                    <div class="title">
+                        <h1>空调&nbsp></h1>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>洗衣机&nbsp></h1>
+                        <h6>滚筒洗衣机&nbsp|</h6>
+                        <h6>洗烘一体机&nbsp|</h6>
+                        <h6>波轮洗衣机&nbsp|</h6>
+                        <h6>迷你洗衣机&nbsp|</h6>
+                        <h6>洗衣机配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>厨卫大电&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>嵌入式厨电</h6>
+                    </div>
+                    <div class="title">
+                        <h1>厨卫小电&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>燃气热水器</h6>
+                    </div>
+                    <div class="title">
+                        <h1>生活电器&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>个护健康&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>家庭影音&nbsp></h1>
+                        <h6>家庭影院&nbsp|</h6>
+                        <h6>迷你音响&nbsp|</h6>
+                        <h6>DVD&nbsp|</h6>
+                        <h6>电视影音配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>进口电器&nbsp></h1>
+                        <h6>进口电器</h6>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="tep">
+            <a href="#">医药保健</a>
+            <div class="itms">
+                <div class="imp">
+                    <div class="mp">专科用药&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">品牌日&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">智能生活馆&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">京东净化馆&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">京东帮服务店&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">家电众筹馆&nbsp<h5>&nbsp></h5></div>
+                </div>
+                <div class="content">
+                    <div class="title">
+                        <h1>电视&nbsp></h1>
+                        <h6>合资品牌&nbsp|</h6>
+                        <h6>国产品牌&nbsp|</h6>
+                        <h6>互联网品牌</h6>
+                    </div>
+                    <div class="title">
+                        <h1>空调&nbsp></h1>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>洗衣机&nbsp></h1>
+                        <h6>滚筒洗衣机&nbsp|</h6>
+                        <h6>洗烘一体机&nbsp|</h6>
+                        <h6>波轮洗衣机&nbsp|</h6>
+                        <h6>迷你洗衣机&nbsp|</h6>
+                        <h6>洗衣机配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>厨卫大电&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>嵌入式厨电</h6>
+                    </div>
+                    <div class="title">
+                        <h1>厨卫小电&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>燃气热水器</h6>
+                    </div>
+                    <div class="title">
+                        <h1>生活电器&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>个护健康&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>家庭影音&nbsp></h1>
+                        <h6>家庭影院&nbsp|</h6>
+                        <h6>迷你音响&nbsp|</h6>
+                        <h6>DVD&nbsp|</h6>
+                        <h6>电视影音配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>进口电器&nbsp></h1>
+                        <h6>进口电器</h6>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="tep">
+            <a href="#">图书、音像、电子书</a>
+            <div class="itms">
+                <div class="imp">
+                    <div class="mp">图书频道&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">品牌日&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">智能生活馆&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">京东净化馆&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">京东帮服务店&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">家电众筹馆&nbsp<h5>&nbsp></h5></div>
+                </div>
+                <div class="content">
+                    <div class="title">
+                        <h1>电视&nbsp></h1>
+                        <h6>合资品牌&nbsp|</h6>
+                        <h6>国产品牌&nbsp|</h6>
+                        <h6>互联网品牌</h6>
+                    </div>
+                    <div class="title">
+                        <h1>空调&nbsp></h1>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>洗衣机&nbsp></h1>
+                        <h6>滚筒洗衣机&nbsp|</h6>
+                        <h6>洗烘一体机&nbsp|</h6>
+                        <h6>波轮洗衣机&nbsp|</h6>
+                        <h6>迷你洗衣机&nbsp|</h6>
+                        <h6>洗衣机配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>厨卫大电&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>嵌入式厨电</h6>
+                    </div>
+                    <div class="title">
+                        <h1>厨卫小电&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>燃气热水器</h6>
+                    </div>
+                    <div class="title">
+                        <h1>生活电器&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>个护健康&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>家庭影音&nbsp></h1>
+                        <h6>家庭影院&nbsp|</h6>
+                        <h6>迷你音响&nbsp|</h6>
+                        <h6>DVD&nbsp|</h6>
+                        <h6>电视影音配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>进口电器&nbsp></h1>
+                        <h6>进口电器</h6>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="tep">
+            <a href="#">彩票、旅行、充值、票务</a>
+            <div class="itms">
+                <div class="imp">
+                    <div class="mp">充值缴费&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">品牌日&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">智能生活馆&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">京东净化馆&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">京东帮服务店&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">家电众筹馆&nbsp<h5>&nbsp></h5></div>
+                </div>
+                <div class="content">
+                    <div class="title">
+                        <h1>电视&nbsp></h1>
+                        <h6>合资品牌&nbsp|</h6>
+                        <h6>国产品牌&nbsp|</h6>
+                        <h6>互联网品牌</h6>
+                    </div>
+                    <div class="title">
+                        <h1>空调&nbsp></h1>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>洗衣机&nbsp></h1>
+                        <h6>滚筒洗衣机&nbsp|</h6>
+                        <h6>洗烘一体机&nbsp|</h6>
+                        <h6>波轮洗衣机&nbsp|</h6>
+                        <h6>迷你洗衣机&nbsp|</h6>
+                        <h6>洗衣机配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>厨卫大电&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>嵌入式厨电</h6>
+                    </div>
+                    <div class="title">
+                        <h1>厨卫小电&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>燃气热水器</h6>
+                    </div>
+                    <div class="title">
+                        <h1>生活电器&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>个护健康&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>家庭影音&nbsp></h1>
+                        <h6>家庭影院&nbsp|</h6>
+                        <h6>迷你音响&nbsp|</h6>
+                        <h6>DVD&nbsp|</h6>
+                        <h6>电视影音配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>进口电器&nbsp></h1>
+                        <h6>进口电器</h6>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="tep">
+            <a href="#">理财、众筹、白条、保险</a>
+            <div class="itms">
+                <div class="imp">
+                    <div class="mp">金融首页&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">品牌日&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">智能生活馆&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">京东净化馆&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">京东帮服务店&nbsp<h5>&nbsp></h5></div>
+                    <div class="mp">家电众筹馆&nbsp<h5>&nbsp></h5></div>
+                </div>
+                <div class="content">
+                    <div class="title">
+                        <h1>电视&nbsp></h1>
+                        <h6>合资品牌&nbsp|</h6>
+                        <h6>国产品牌&nbsp|</h6>
+                        <h6>互联网品牌</h6>
+                    </div>
+                    <div class="title">
+                        <h1>空调&nbsp></h1>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>洗衣机&nbsp></h1>
+                        <h6>滚筒洗衣机&nbsp|</h6>
+                        <h6>洗烘一体机&nbsp|</h6>
+                        <h6>波轮洗衣机&nbsp|</h6>
+                        <h6>迷你洗衣机&nbsp|</h6>
+                        <h6>洗衣机配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>厨卫大电&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>嵌入式厨电</h6>
+                    </div>
+                    <div class="title">
+                        <h1>厨卫小电&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>燃气热水器</h6>
+                    </div>
+                    <div class="title">
+                        <h1>生活电器&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h6>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h6>
+                        <h6>壁挂式空调&nbsp|</h6>
+                        <h6>柜式空调&nbsp|</h6>
+                        <h6>中央空调&nbsp|</h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>个护健康&nbsp></h1>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>燃气灶&nbsp|</h6>
+                        <h6>烟灶套装&nbsp|</h6>
+                        <h6>消毒柜&nbsp|</h6>
+                        <h6>洗碗机&nbsp|</h6>
+                        <h6>电热水器&nbsp|</h6>
+                        <h6>燃气热水器&nbsp|</h6>
+                        <h6>厨卫大电&nbsp></h6>
+                        <h6>油烟机&nbsp|</h6>
+                        <h6>空调配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>家庭影音&nbsp></h1>
+                        <h6>家庭影院&nbsp|</h6>
+                        <h6>迷你音响&nbsp|</h6>
+                        <h6>DVD&nbsp|</h6>
+                        <h6>电视影音配件</h6>
+                    </div>
+                    <div class="title">
+                        <h1>进口电器&nbsp></h1>
+                        <h6>进口电器</h6>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="feiji">
+                <h1>京东快报<span>更多&nbsp></span></h1>
+                <ul>
+                    <li>[特惠]<span>LG超级品牌日&nbsp满1000减100</span></li>
+                    <li>[特惠]<span>LG超级品牌日&nbsp满1000减100</span></li>
+                    <li>[特惠]<span>LG超级品牌日&nbsp满1000减100</span></li>
+                    <li>[特惠]<span>LG超级品牌日&nbsp满1000减100</span></li>
+                    <li>[特惠]<span>LG超级品牌日&nbsp满1000减100</span></li>
+                </ul>
+                <div class="nmb">
+                    <div class="ngsb">
+                        <img src="img/t1.png">
+                        <img src="img/t2.png">
+                        <img src="img/t3.png">
+                        <img src="img/t4.png">
+                    </div>
+                    <div class="text1">
+                        <span>话费</span>
+                        <span>飞机票</span>
+                        <span>电影票</span>
+                        <span>游戏</span>
+                    </div>
+                    <div class="ngsb">
+                        <img src="img/t5.png">
+                        <img src="img/t6.png">
+                        <img src="img/t7.png">
+                        <img src="img/t8.png">
+                    </div>
+                    <div class="text">
+                        <span>话费</span>
+                        <span>飞机票</span>
+                        <span>电影票</span>
+                        <span>游戏</span>
+                    </div>
+                    <div class="ngsb">
+                        <img src="img/t9.png">
+                        <img src="img/t10.png">
+                        <img src="img/t11.png">
+                        <img src="img/t12.png">
+                    </div>
+                    <div class="text">
+                        <span>话费</span>
+                        <span>飞机票</span>
+                        <span>电影票</span>
+                        <span>游戏</span>
+                    </div>
+                </div>
+                 <div class="fugai">
+                     <div class="cha">×</div>
+                        <div class="h">
+                            <span>话费</span>
+                            <span>机票</span>
+                            <span>电影票</span>
+                            <span>游戏</span>
+                            <h3>话费充值</h1>
+                            <div class="hao"><p>号码</p>&nbsp<input type="text"></div>
+                            <div class="mian"><p>面值</p>&nbsp<select name="" id="">
+                                <option value="100">100</option>
+                                <option value="50">50</option>
+                                <option value="20">20</option>
+                                <option value="10">10</option>
+                                </select></div>
+                                <button type="submit">快速充值</button>
+                        </div>
+                    </div>
+                <div class="kuang">
+                    <img src="img/kuanghuan.png">
+                </div>
+            </div>
+<div class="slider">
+  <ul class="slider-main">
+    <li>
+      <img src="img/11.jpg" alt="">
+    </li>
+    <li>
+      <img src="img/22.jpg" alt="">
+    </li>
+    <li>
+      <img src="img/33.jpg" alt="">
+    </li>
+    <li>
+      <img src="img/44.jpg" alt="">
+    </li>
+    <li>
+      <img src="img/55.jpg" alt="">
+    </li>
+    <li>
+      <img src="img/66.jpg" alt="">
+    </li>
+  </ul>
+</div>      
+        </div>
+            <div class="clock">
+                <div class="circle"></div>
+                <img src="img/zhuanggeyangzi.png" alt="">
+            </div>
+            <div class="cai">
+                <h1>猜你喜欢</h1>
+                <h2>根据您的喜好精心为您推荐！</h2>
+                <h3>换一批</h3>
+                <div class="tu">
+                    <img src="img/111.jpg" alt="">
+                    <img src="img/222.jpg" alt="">
+                    <img src="img/333.jpg" alt="">
+                    <img src="img/444.jpg" alt="">
+                    <img src="img/2222.jpg" alt="">
+                </div>
+            </div>
+            <div class="pin">
+                <h1>京东.品质生活</h1>
+                <div class="tu">
+                    <div class="tu1">
+                    <img src="img/a.png" alt="">
+                    <img src="img/b.png" alt="">
+                    <img src="img/c.png" alt="">
+                    </div>
+                    <div class="tu1">
+                    <img src="img/d.png" alt="">
+                    <img src="img/e.png" alt="">
+                    <img src="img/f.png" alt="">
+                    <img src="img/g.png" alt="">
+                    <img src="img/h.png" alt="">
+                    </div>
+                    <!--<div class="tu1">
+                       <img src="img/j.png" alt=""> 
+                    </div>-->
+                </div>
+                <div class="pang">
+                    <img src="img/j.png" alt="">
+                </div>
+            </div>
+            <div class="aa">
+                <img src="img/a1.jpg">
+                <img src="img/a2.jpg">
+                <img src="img/a3.jpg">
+            </div>
+    </main>
+    <footer>
+        <div class="hang">
+            <span>品类齐全&nbsp轻松购物</span>
+            <span>多仓直发&nbsp激素配送</span>
+            <span>正品行货&nbsp精致服务</span>
+            <span>天天低价&nbsp畅选无忧</span>
+        </div>
+        <div class="kao">
+            <span>购物指南</span>
+            <span>购物指南</span>
+            <span>购物指南</span>
+            <span>购物指南</span>
+            <span>购物指南</span>
+        </div>
+        <div class="gouwu">
+            <div class="zhinan">
+                <p>购物流程</p>
+                <p>购物流程</p>
+                <p>购物流程</p>
+                <p>购物流程</p>
+                <p>购物流程</p>
+            </div>
+            <div class="zhinan">
+                <p>购物流程</p>
+                <p>购物流程</p>
+                <p>购物流程</p>
+                <p>购物流程</p>
+                <p>购物流程</p>
+            </div>
+            <div class="zhinan">
+                <p>购物流程</p>
+                <p>购物流程</p>
+                <p>购物流程</p>
+                <p>购物流程</p>
+                <p>购物流程</p>
+            </div>
+            <div class="zhinan">
+                <p>购物流程</p>
+                <p>购物流程</p>
+                <p>购物流程</p>
+                <p>购物流程</p>
+                <p>购物流程</p>
+            </div>
+            <div class="zhinan">
+                <p>购物流程</p>
+                <p>购物流程</p>
+                <p>购物流程</p>
+                <p>购物流程</p>
+                <p>购物流程</p>
+            </div>
+            <div class="zhinan">
+                <p>购物流程</p>
+                <p>购物流程</p>
+                <p>购物流程</p>
+                <p>购物流程</p>
+                <p>购物流程</p>
+            </div>
+        </div>
+        <div class="youshixian"></div>
+        <div class="guanyu">
+            <span>关于我们&nbsp|</span>
+            <span>联系我们&nbsp|</span>
+            <span>联系客服&nbsp|</span>
+            <span>商家入驻&nbsp|</span>
+            <span>营销中心&nbsp|</span>
+            <span>手机京东&nbsp|</span>
+            <span>友情链接&nbsp|</span>
+            <span>销售联盟&nbsp|</span>
+            <span>京东社区&nbsp|</span>
+            <span>京东公益&nbsp|</span>
+            <span>English Site&nbsp|</span>
+            <span>Contact us&nbsp|</span>
+        </div>
+        <div class="luanxie"> 京公网安备 11000002000088号  |  京ICP证070359号  |  互联网药品信息服务资格证编号(京)-经营性-2014-0008  |  新出发京零 字第大120007号</div>
+        <div class="youshiluanxie">互联网出版许可证编号新出网证(京)字150号  |  出版物经营许可证  |  网络文化经营许可证京网文[2014]2148-348号  |  违法和不良信息举报电话：4006561155</div>
+        <div class="luanxiede">Copyright © 2004 - 2016  京东JD.com 版权所有  |  消费者维权热线：4006067733</div>
+        <div class="cacacacaca">京东旗下网站：京东钱包</div>
+    </footer>
+        <div class="container">
+        <div class="box">服饰</div>
+        <div class="box">2L</div>
+        <div class="box">3L</div>
+        <div class="box">4L</div>
+        <div class="box">5L</div>
+        <div class="box">6L</div>
+        <div class="box">7L</div>
+        <div class="box">8L</div>
+        <div class="box">9L</div>
+        <div class="box">10L</div>
+        <div class="box">11L</div>
+        <div class="box">12L</div>
+    </div>
+    <div class="bg"></div>
+</body>
+</html>

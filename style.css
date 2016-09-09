@@ -1,0 +1,761 @@
+/*顶部*/
+body{
+    margin:0;
+}
+header{
+    height:160px;
+    width:1366px;
+}
+.opt{
+    width:1366px;
+    height: 40px;
+    position: relative;
+    color:#666;
+    background-color: #F1F1F1;
+}
+.search{
+    width:1366px;
+    height: 120px;
+}
+.item{
+    width:300px;
+    height:40px;
+    font-size: 13px;
+    position: absolute;
+    left:80px;
+    top:10px;
+}
+.item:hover{
+    cursor: default;
+}
+.it{
+    width:300px;
+    height:40px;
+    position: relative;
+    background-color:white;
+    display: none;
+    z-index: 2500;
+}
+.it:hover{
+    cursor: pointer;
+}
+#items{
+    float:left;
+    margin-left: 20px;
+    margin-top: 3px;
+    padding:5px;
+}
+
+
+#items:hover{
+    background:#F1F1F1;
+    color:red;
+}
+
+.it:first-child :nth-child(1){
+    background:#C81623;
+    color:white;
+}
+.dt{
+    width:1000px;
+    height:40px;
+    position: absolute;
+    left: 500px;
+    font-size: 13px;
+    top:4px;
+}
+.link a{
+    color: #666;
+    text-decoration: none;
+    float:left;
+    padding:8px;
+}
+.link a:hover{
+    color:#C81623;
+}
+#free{
+    color:#C81623;
+}
+.link{
+    width:270px;
+    float:left;
+    margin-left: 30px;
+}
+.oo{
+    position: absolute;
+    top:8px;
+    z-index: 1000;
+}
+.o1{
+    left:268px;
+}
+.o2{
+    left:470px;
+}
+.o3{
+    left:540px;
+}
+.o4{
+    left:610px;
+}
+.o5{
+    left:680px;
+}
+.jd{
+    width:185px;
+    height:160px;
+    background-color:whitesmoke;
+    display: none;
+    font-size: 20px;
+    color:deepskyblue;
+}
+.search .img{
+    width: 267px;
+    height:86px;
+    background-image: url('./img/1.png');
+    position:absolute;
+    left:80px;
+}
+.search .img:hover{
+    cursor: pointer;
+}
+/*.inp{
+    text-align: center;
+}*/
+.inp input[type="text"]{
+    width: 454px;
+    height: 22px;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 6px;
+    border: 2px solid #C81623;
+    box-sizing: content-box;
+    position: absolute;
+    top:65px;
+    left:430px;
+}
+.inp input[type="button"]{
+    width: 100px;
+    height: 38px;
+    background-color: #C81623;
+    border: none;
+    font-size: 17px;
+    font-family: "Microsoft YaHei";
+    color: white;
+    position: absolute;
+    top:65px;
+    left:900px;
+}
+.inp input[type="button"]:hover{
+    cursor: pointer;
+}
+.scar{
+    position: absolute;
+    left:1100px;
+    top: 65px;
+    background-color: whitesmoke;
+    width: 130px;
+    height: 38px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    line-height: 38px;
+    z-index: 500;
+    border:1px solid #EEEEE0;
+}
+.q{
+    position: absolute;
+    left:115px;
+    top:1px;
+    font-size: 20px;
+}
+.c:hover{
+    color:#C81623;
+}
+.car{
+    width: 300px;
+    height:70px;
+    background-color: whitesmoke;
+    position: absolute;
+    left: -170px;
+    display: none;
+}
+.l{
+    width:500px;
+    height:30px;
+    position:absolute;
+    top:110px;
+    left:430px;
+    font-size: 13px;
+}
+.l a:not(:first-child){
+    color: #666;
+    text-decoration: none;
+}
+.l a:first-child{
+    color:#C81623;
+    text-decoration: none;
+}
+.l a:hover{
+    color:#C81623;
+    cursor: pointer;
+}
+.nav{
+    display: inline-block;
+    width: 800px;
+    height: 50px;
+    position: absolute;
+    top:145px;
+    left:280px;
+}
+h4{
+    height: 30px;
+    margin:0;
+    padding: 0;
+    float:left;
+    padding-left: 40px;
+    font-size: 16px;
+    color: #333;
+    font-weight: 400;
+    font-family: "Microsoft YaHei";
+}
+h4:hover{
+    color:#C81623;
+    cursor: pointer;
+}
+.step{
+    width:210px;
+    height: 44px;
+    padding: 20 50px;
+    position: absolute;
+    top:125px;
+    left:80px;
+    background-color: #B1191A;
+}
+.step p{
+    width:150px;
+    position: absolute;
+    left: 15px;
+    top:-5px;
+    font-size: 16px;
+    color: whitesmoke;
+    font-weight: 500;
+    font-family: "Microsoft YaHei";
+}
+.step p:hover{
+    cursor: pointer;
+}
+.thread{
+    width: 1366px;
+    border:1px solid #C81623;
+    position: absolute;
+    top: 167px;
+}
+/*main*/
+main{
+    position: relative;
+}
+.steps{
+    width:210px;
+    /*height:466px;*/
+    height: 480px;
+    background-color: #c81623;
+    position: absolute;
+    left:80px;
+    top:8px;
+}
+.steps a{
+    line-height: 31px;
+    font-family: "microsoft yahei";
+    font-size: 14px;
+    font-weight: 400;
+    color:whitesmoke;
+    margin: 0;
+    padding: 0;
+    width:210px;
+    text-indent: 1em;
+    border-left:1px solid #c81623;
+    border-bottom: 1px solid #c81623;
+    text-decoration: none;
+    display: block;
+}
+.steps a:hover{
+    cursor: pointer;
+    background-color: whitesmoke;
+    color:#c81623;
+}
+.itms{
+    width: 990px;
+    height: 650px;
+    background-color: #EEE5DE;
+    position: absolute;
+    left:210px;
+    top:0;
+    display: none;
+    border:1px solid #c81623;
+    z-index: 2800;
+}
+.imp{
+    width:780px;
+    height:30px;
+    position: absolute;
+    z-index:1000;
+    top:0;
+}
+.mp h5 {
+    display: inline-block;
+    background-color: #5c5251;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+.mp{
+    display:inline-block;
+    background:#7C7171;
+    margin-left: 5px;
+    margin-top: 25px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size:10px;
+    color:#fff;
+}
+.imp:hover{
+    cursor: pointer;
+}
+.content{
+    width:880px;
+    height: 550px;
+    position: absolute;
+    z-index: 999;
+    color:#666;
+    margin-top: 70px;
+}
+.title{
+    display: flex;
+    flex-direction: row;
+}
+.title h1{
+    height: 20px;
+    line-height: 20px;
+    flex-basis: 80px;
+    font-size: 14px;
+    margin-top: 0;
+    text-align: right;
+    font-weight: 400;
+}
+.title h6{
+    height: 20px;
+    line-height: 20px;
+    margin-top: 0px;
+    margin-left:10px;
+    font-weight: 400;
+}
+.title h1:hover{
+    color: #c81623;
+    cursor: pointer;
+}
+.title h6:hover{
+    color: #c81623;
+    cursor: pointer;
+}
+.slider{
+    position: absolute;
+    left:220px;
+    top:-455px;
+    z-index: 2000;
+}
+.feiji{
+    width:250px;
+    height: 365px;
+    position: absolute;
+    left:960px;
+    top:25px;
+    background: #fff;
+    border: 1px solid #E8E8E7;
+    border-bottom:none;
+}
+.feiji span:hover{
+    color: #c81623;
+    cursor: pointer;
+}
+.feiji li:hover{
+    color: #c81623;
+    cursor: pointer;
+}
+.feiji h1{
+    font-size: 16px;
+    font-family: "microsoft yahei";
+    font-weight: 400;
+    color: #666;
+    position: absolute;
+    left: 0;
+    width:250px;
+    border-bottom: 1px dotted #E8E8E7;
+    text-indent:1em;
+}
+.feiji h1 span{
+    position: absolute;
+    left: 190px;
+    font-size: 12px;
+}
+.feiji h1 span:hover{
+    color: #c81623;
+    cursor: pointer;
+}
+.feiji ul{
+    font-size: 13px;
+    font-weight: 700;
+    margin-right: 5px;
+    list-style: none;
+    color: #666;
+    position: absolute;
+    left:-10px;
+    top:30px;
+    line-height: 20px;
+    width: 220px;
+    border-bottom: 1px solid #E8E8E7;
+}
+.feiji ul span{
+    font-weight: 400;
+}
+.nmb{
+    width: 250px;
+    height: 220px;
+    position: absolute;
+    top:144px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.fugai .cha{
+    position: absolute;
+    left: 235px;
+    top:20px;
+    color: #333;
+    font-size: 10px;
+    font-weight: 800;
+}
+.cha:hover{
+    background-color: #666;
+    color:#fff;
+    cursor: pointer;
+}
+.ngsb,.text,.text1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 12px;
+    color:#666;
+    line-height: 25px;
+}
+.nmb .text{
+    border-bottom: 1px solid #E8E8E7;
+}
+.fugai{
+    width:250px;
+    height: 220px;
+    background-color:#fff;
+    position: absolute;
+    top:144px;
+    display: none;
+    font-size: 12px;
+    color: #666;
+}
+.fugai h3{
+    font-size: 12px;
+    font-weight: 400;
+    position: absolute;
+    left: 20px;
+    top:30px;
+}
+.fugai input[type=text]{
+    width:120px;
+}
+.hao{
+    position: absolute;
+    left: 20px;
+    top:80px;
+}
+.hao p{
+    display: inline-block;
+}
+.mian{
+    position: absolute;
+    left:20px;
+    top:110px;
+}
+.mian p{
+    display: inline-block;
+}
+.h button{
+    position: absolute;
+    left:20px;
+    top:150px;
+    border: none;
+    height:35px;
+    width:80px;
+    background-color: #c81623;
+    color: #fff;
+}
+.h span{
+    font-size: 12px;
+    display: inline-block;
+    width: 55px;
+    height: 20px;
+    text-indent: 1em;
+    border-right: 1px solid #E8E8E7;
+}
+.h span:nth-child(4){
+    border: none;
+}
+.h h1{
+    font-size: 13px;
+    color: #666;
+    padding-left: 20px;
+}
+.kuang{
+    position: absolute;
+    top:378px;
+    left:0px;
+}
+.kuang:hover{
+    cursor: pointer;
+}
+.clock{
+    width: 1366px;
+    height: 152px;
+    position: absolute;
+    top:520px;
+    left:300px;
+}
+.clock:hover{
+    cursor: pointer;
+}
+.cai{
+    position: absolute;
+    top:700px;
+    left:80px;
+}
+.cai h1{
+    font-size: 25px;
+    color: #333;
+}
+.cai h2{
+    width: 300px;
+    font-size: 20px;
+    color:#666;
+    position: absolute;
+    left:110px;
+    top:5px;
+    font-family: Arial;
+}
+.cai h3{
+    width: 100px;
+    font-size: 15px;
+    color:#666;
+    position: absolute;
+    left:1150px;
+    top:5px;
+}
+.cai h3:hover{
+    color: #c81623;
+    cursor: pointer;
+}
+.cai .tu{
+    display: flex;
+    flex-direction: row;
+}
+.cai .tu:hover{
+    cursor: pointer;
+}
+.pin{
+    position: absolute;
+    top:950px;
+    left:80px;
+}
+.pin h1{
+    font-size: 25px;
+    color: #333;
+}
+.pin .tu{
+    display: flex;
+    flex-direction: column;
+}
+.pin .tu .tu1{
+    display: flex;
+    flex-direction: row;
+}
+.pang{
+    position: absolute;
+    top:65px;
+    left:1050px;
+}
+.pang,.pin{
+    cursor: pointer;
+}
+.aa{
+    display: flex;
+    position: absolute;
+    top:1440px;
+    left:85px;
+}
+
+
+
+.container{
+     width:40px;
+     height:300px;
+     position:absolute;
+     left:10px;
+     bottom:-1000px;
+}
+.box:nth-child(1){
+    color:#c81623;
+}
+.box{
+    font-size: 12px;
+    width:30px;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    border-bottom: 1px solid #E8E8E7;
+}
+.box:hover{
+    background-color:#c81623;
+    cursor: pointer;
+    color: #E8E8E7;
+}
+.bg{
+    width:100%;
+    height:7600px;
+}
+
+/*footer*/
+footer{
+    position: absolute;
+    top:7200px;
+    width:1366px;
+}
+.hang{
+    height: 100px;
+    background: #EBEBEB;
+}
+.hang span{
+    display: inline-block;
+    width:300px;
+    height: 90px;
+    line-height: 90px;
+    text-indent: 5em;
+    font-size: 20px;
+    font-weight: 500;
+}
+.gouwu{
+    position: absolute;
+    top:200px;
+    left: 90px;
+    display:flex;
+    flex-direction: column;
+    font-size: 15px;
+    color: #666;
+}
+.zhinan p{
+    display: inline-block;
+    width: 200px;
+    line-height: 1px;
+}
+.zhinan p:hover{
+    cursor: pointer;
+    color: #c81623;
+}
+.kao{
+    position: absolute;
+    top:150px;
+    left:90px;
+}
+.kao span{
+    display: inline-block;
+    width:200px;
+    font-size: 17px;
+    color: #666;
+    font-weight: 800;
+}
+.youshixian{
+    position: absolute;
+    top: 400px;
+    width: 1186px;
+    left: 90px;
+    border-top: 1px solid #EBEBEB;
+}
+.guanyu{
+    position: absolute;
+    top:440px;
+    left: 80px;
+    color: #666;
+}
+.guanyu span:hover{
+    cursor: pointer;
+    color:#c81623;
+}
+.luanxie{
+    position: absolute;
+    top: 470px;
+    left: 250px;
+    color: #666;
+    font-size: 12px;
+}
+.youshiluanxie{
+    position: absolute;
+    top: 490px;
+    left: 220px;
+    color: #666;
+    font-size: 12px;
+}
+.luanxiede{
+    position: absolute;
+    top: 510px;
+    left: 400px;
+    color: #666;
+    font-size: 12px;
+}
+.cacacacaca{
+    position: absolute;
+    top: 530px;
+    left: 550px;
+    color: #666;
+    font-size: 12px;
+}
+
+
+
+
+
+.circle {
+ width:80px;
+  height:80px;
+  border-radius:50%;
+  border:5px solid #B1191A;
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+   animation:spin 4s linear infinite;
+   position: absolute;
+   top:-115px;
+   bottom: 0;
+   left: -1600px;
+   right: 0;
+   margin: 0 auto;
+   margin-top: 11%;
+}
+
+.circle:after{
+  content:' ';
+  width:18px;
+  height:18px;
+  background:yellow;
+  display:block;
+  border-radius:50%;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
